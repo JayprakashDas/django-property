@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'listings.apps.ListingsConfig',
     'realtors.apps.RealtorsConfig',
     'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -135,3 +136,17 @@ STATICFILES_DIRS=[
 # //media folder settings
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+
+#MESSAGES ALERT
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
+#EMAIL CONFIG
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER='jay.rgu.123@gmail.com'
+EMAIL_HOST_PASSWORD='Jayraj@9196'
+EMAIL_USE_TLS = True

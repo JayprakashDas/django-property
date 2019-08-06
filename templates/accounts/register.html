@@ -1,6 +1,9 @@
 
 {%extends '../base.html%}
 {%load static%}
+{% block title %}| Register Account{%endblock%}
+{% load humanize%}
+
 
 {%block content%}
 
@@ -14,6 +17,9 @@
                 <i class="fas fa-user-plus"></i> Register</h4>
             </div>
             <div class="card-body">
+              <!-- ALERTS MESSAGE -->
+                {% include 'partials/_alerts.html' %}
+
                 <form action="{%url 'register' %}" method="POST">
                     {% csrf_token %}
                   <div class="form-group">

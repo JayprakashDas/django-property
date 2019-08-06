@@ -1,6 +1,8 @@
 
 {%extends '../base.html%}
 {%load static%}
+{% block title %}| Account Login{%endblock%}
+
 
 {%block content%}
 <section id="login" class="bg-light py-5">
@@ -13,6 +15,7 @@
                 <i class="fas fa-sign-in-alt"></i> Login</h4>
             </div>
             <div class="card-body">
+                {% include 'partials/_alerts.html' %}
               <form action="{%url 'login' %}" method="POST">
                   <!-- //for secure -->
                   {% csrf_token %}
